@@ -50,7 +50,16 @@
 
     <nav role="navigation">
         <a href="index.html"><img id="logoIcon"src="images/logo.png" alt="Logo"/></a>
-        <a href="contact.html"><div class="discuss"><button class="button button-secondary">DISCUSS A PROJECT</button></div></a>
+        <a href="contact.html">
+            <div class="discuss">
+                <button class="button button-secondary">DISCUSS A PROJECT
+                <span class="arrow-icon">
+                    <i class="fas fa-arrow-right"></i>
+                </span>
+            </button>
+            </div>
+        </a>
+        
         <video autoplay loop muted class="video-background">
             <source src="images/background.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -86,16 +95,31 @@
         data-aos-mirror="true"
         data-aos-once="false">
             <div class="button-container">
-            <a href="service.html">
-                <button class="button button-primary">Explore More</button>
-            </a>
-            <img src="images/arrow.png" class="circle">                
+                <a href="service.html">
+                    <button class="button button-primary">
+                        EXPLORE MORE 
+                        <span class="arrow-icon">
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </button>
+                </a>
+                
+            <!--<a href="#studio-section">
+                <img src="images/arrow.png" class="circle">-->
+                <a href="#studio-section"class="link-explore">
+                    <span class="icon-wrapper">
+                        <i class="fas fa-arrow-down"></i>
+                    </span>
+                </a>
+                
+                
+            <!--</a>-->               
 
             </div>
         </main>
     </div>
 
-    <section class="studio-section">
+    <section id="studio-section" class="studio-section">
         <div class="studio-content">
             <div class="studio-logo">
                 <div  data-aos="zoom-in-up" data-aos-delay="50"
@@ -155,11 +179,15 @@
                 <h2 style="font-size: 30px; margin-top: -50px; margin-left: 400px;">to transform your bussiness.</h2>
             </div><br>
             <a href="service.html"><div class="services-button-container">
-                <button class="button button-primary" data-aos="zoom-in-down" data-aos-delay="50"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-                data-aos-once="false">Explore More</button>
+                <button class="button button-primary" data-aos="zoom-in-down" data-aos-delay="50" 
+        data-aos-duration="1000" data-aos-easing="ease-in-out"
+        data-aos-mirror="true" data-aos-once="false">
+    Explore More
+    <span class="arrow-icon">
+        <i class="fas fa-arrow-right"></i>
+    </span>
+</button>
+
             </div>
             <div style="margin-bottom: 200px;"></div> </a>
             <div class="services-grid">
@@ -323,6 +351,18 @@
                     #${Math.floor(Math.random() * 16777215).toString(16)},
                     #${Math.floor(Math.random() * 16777215).toString(16)})`;
             }, 1000);
+          
+            document.querySelector('.link-explore').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default anchor click behavior
+
+        // Get the target section
+        const targetSection = document.querySelector('#studio-section');
+
+        // Scroll to the target section smoothly
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    });
+
           </script>
+          
 </body>
 </html>

@@ -114,7 +114,7 @@ header p {
     gap: 16px;
     margin-bottom: 48px;
 }
-.circle{
+.link-explore{
     margin-left: 1000px;
     height: 50px;
     width: auto;
@@ -129,7 +129,7 @@ header p {
     align-items: center;
     cursor: pointer;
     border: none;
-    font-size: 16px;
+    font-size: 20px;
     transition: box-shadow 0.3s ease;
 }
 
@@ -153,6 +153,70 @@ header p {
 .button-primary:hover {
     box-shadow: 0 0 20px 5px rgba(128, 0, 128, 0.8); /* Purple glow */
 }
+
+
+.arrow-icon {
+    margin-left: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+.arrow-icon i {
+    color: #7e22ce; /* Change the arrow icon color to purple */
+    /*font-size: 24px; /* Increased icon size */
+}
+
+/* Hover effect for the arrow icon */
+.arrow-icon:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+
+
+.icon-wrapper {
+    margin-left: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* Increased width for outer circle */
+    height: 100px; /* Increased height for outer circle */
+    border-radius: 50%; /* Outer circle */
+    background-color: #7e22ce; /* Black background */
+    position: relative; /* Position relative for inner circle */
+    transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+.icon-wrapper:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px; /* Size of inner circle */
+    height: 50px; /* Size of inner circle */
+    border-radius: 50%; /* Inner circle */
+    background-color: black; /* Purple background */
+    transform: translate(-50%, -50%); /* Center the inner circle */
+    z-index: 1; /* Position inner circle below the icon */
+}
+
+.icon-wrapper i {
+    color: #7e22ce; /* Change the arrow icon color to white for contrast */
+    z-index: 2; /* Position the icon above the inner circle */
+}
+
+/* Hover effect for the arrow icon */
+.icon-wrapper:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+
+
 
 @media (max-width: 768px) {
     .button-primary {
@@ -203,6 +267,7 @@ header p {
         width: 50%;
         padding-right: 48px;
         margin-bottom: 0;
+        margin-top: auto;
     }
 }
 
@@ -231,6 +296,7 @@ header p {
 }
 
 .studio-image {
+    margin-top: 0;
     width: 100%;
 }
 
